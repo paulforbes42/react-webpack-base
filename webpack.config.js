@@ -44,7 +44,7 @@ module.exports = {
     port: 3002,
     historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/api': 'http://host.docker.internal:3000',
     },
   },
   plugins: [

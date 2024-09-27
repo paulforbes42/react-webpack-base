@@ -84,7 +84,7 @@ describe('Admin Users View', () => {
     expect(getByTestId('pagination-8')).toBeInTheDocument();
     fireEvent.click(getByTestId('pagination-8'));
 
-    await waitFor(() => expect(request).toHaveBeenCalledWith('/api/admin/user?page=8&limit=10'));
+    await waitFor(() => expect(request).toHaveBeenCalledWith('/api/users?page=8&limit=10'));
   });
 
   it('should create a new user', async () => {

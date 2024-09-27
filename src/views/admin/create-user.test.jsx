@@ -101,7 +101,7 @@ describe('Admin User View', () => {
     fireEvent.submit(getByText('Submit'));
 
     expect(await findByText('Create User')).toBeInTheDocument();
-    expect(request).toHaveBeenCalledWith('/api/admin/user', {
+    expect(request).toHaveBeenCalledWith('/api/user', {
       method: 'POST',
       body: {
         firstName: 'testFirstName2',

@@ -23,7 +23,7 @@ describe('routes', () => {
         (r) => r.path === '/admin/users',
       );
       await adminUsersRoute.loader();
-      expect(request).toHaveBeenCalledWith('/api/admin/user');
+      expect(request).toHaveBeenCalledWith('/api/users');
 
       const adminUserRoute = routes[1].children.find(
         (r) => r.path === '/admin',
@@ -31,7 +31,7 @@ describe('routes', () => {
         (r) => r.path === '/admin/user/:userId',
       );
       await adminUserRoute.loader({ params: { userId: 'test' } });
-      expect(request).toHaveBeenCalledWith('/api/admin/user/test');
+      expect(request).toHaveBeenCalledWith('/api/user/test/detail');
     });
   });
 });

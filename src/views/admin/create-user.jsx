@@ -60,7 +60,7 @@ export default function AdminCreateUserView() {
   const createUser = useCallback((data) => {
     const fetchData = async () => {
       try {
-        const { id } = await request('/api/admin/user', {
+        const { id } = await request('/api/user', {
           method: 'POST',
           body: data,
         });

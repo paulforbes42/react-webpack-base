@@ -44,12 +44,12 @@ const router = createBrowserRouter([
           {
             path: '/admin/users',
             element: <AdminUsersView />,
-            loader: () => request('/api/admin/user'),
+            loader: () => request('/api/users'),
           },
           {
             path: '/admin/user/:userId',
             element: <AdminUserView />,
-            loader: ({ params }) => request(`/api/admin/user/${params.userId}`),
+            loader: ({ params }) => request(`/api/user/${params.userId}/detail`),
           },
           {
             path: '/admin/user',

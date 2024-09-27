@@ -71,7 +71,7 @@ export default function AdminUserView() {
   const updateUser = useCallback((data) => {
     const fetchData = async () => {
       try {
-        await request(`/api/admin/user/${userId}`, {
+        await request(`/api/user/${userId}`, {
           method: 'PUT',
           body: data,
         });

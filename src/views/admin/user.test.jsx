@@ -85,7 +85,7 @@ describe('Admin User View', () => {
     fireEvent.submit(getByText('Submit'));
 
     expect(await findByText('User Detail')).toBeInTheDocument();
-    expect(request).toHaveBeenCalledWith('/api/admin/user/testId', {
+    expect(request).toHaveBeenCalledWith('/api/user/testId', {
       method: 'PUT',
       body: {
         firstName: 'testFirstName1',

@@ -9,5 +9,5 @@ services:
     volumes:
       - ./src:/app/src
     ports:
-      - "8080:8080"
+      - "3002:3002"
     command: "npm run dev"

@@ -67,7 +67,7 @@ export default function AdminUsersView() {
 
   const pageTo = useCallback((page, limit) => {
     const fetchData = async () => {
-      const data = await request(`/api/admin/user?page=${page}&limit=${limit}`);
+      const data = await request(`/api/users?page=${page}&limit=${limit}`);
 
       setUsers(data);
       setLoading(false);
